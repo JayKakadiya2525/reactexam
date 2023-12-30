@@ -1,0 +1,18 @@
+/* Post.scss */
+.canvas-img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media screen and (max-width: 320px) {
+  .canvas-img {
+    padding: 6rem !important;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .canvas-img {
+    padding: 3rem !important;
+  }
+}

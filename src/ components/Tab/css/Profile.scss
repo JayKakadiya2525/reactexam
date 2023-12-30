@@ -1,0 +1,58 @@
+/* Profile.scss */
+.profile {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+
+    &.dark-mode {
+        background-color: #262e35;
+
+    }
+
+    &.light-mode {
+        background-color: #ffffff;
+
+    }
+
+    @media (max-width: 991.98px) {
+        width: 100%;
+        min-width: 100%;
+        min-height: auto;
+        overflow-y: scroll;
+    }
+}
+
+
+// .profile {
+
+// &.dark-mode {
+//     background-color: #262e35; // Dark mode background color
+//     color: #EFECF1; // Dark mode text color
+// }
+
+//     &.light-mode {
+//         background-color: #ffffff; // Light mode background color
+//         color: #212529; // Light mode text color
+//         // color: #80ACCD;
+//     }
+// }
+
+
+.img-thumbnail {
+    background-color: none !important;
+    border: none !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.recentlypost {
+    width: 100%;
+}

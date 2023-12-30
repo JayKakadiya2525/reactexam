@@ -1,0 +1,198 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sidebar-bg: #212529; // Background color for the sidebar
+    --border-color: #343a40; // Border color
+    --sidebar-menu-item-color: #adb5bd; // Color for sidebar menu items
+    --sidebar-menu-item-active-bg: #495057; // Background color for active sidebar menu items
+    --primary: #007bff; // Primary color
+    --theme-mode-icon: '\2600'; // Unicode character for the theme mode icon (sun in this example)
+}
+
+.side-menu {
+    min-width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    min-height: 570px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    z-index: 9;
+    box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+
+    @media (max-width: 991.98px) {
+        position: fixed;
+        bottom: 0;
+        height: 60px;
+        min-width: 100%;
+        min-height: auto;
+        display: block;
+        border-top: 1px solid var(--border-color);
+
+        .friendmain {
+            display: none;
+        }
+
+        .postbarmain {
+            width: 100%;
+        }
+    }
+}
+
+.side-menu {
+   
+    &.dark-mode {
+        background-color: #36404A; // Dark mode background color
+        color: #fff; // Dark mode text color
+    }
+
+    &.light-mode {
+        background-color: #ffffff; // Light mode background color
+        color: #212529; // Light mode text color
+    }
+
+}
+
+
+.navbar-brand-box {
+    text-align: center;
+
+    @media (max-width: 991.98px) {
+        display: none;
+    }
+
+    .logo {
+        line-height: 70px;
+    }
+
+    .logo-dark {
+        display: block;
+    }
+
+    .logo-light {
+        display: none;
+    }
+}
+
+.theme-mode-icon {
+    &:before {
+        content: var(--theme-mode-icon);
+    }
+}
+
+.side-menu-nav {
+
+    .nav-item {
+        // margin: 2px 0px;
+
+        @media (max-width: 991.98px) {
+            flex-basis: 0;
+            flex-grow: 1;
+            margin: 5px 0;
+        }
+
+        .nav-link {
+            text-align: center;
+            font-size: 24px;
+            color: var(--sidebar-menu-item-color);
+            width: 56px;
+            height: 56px;
+            line-height: 56px;
+            margin: 0px auto;
+            border-radius: 8px;
+            padding: 0;
+
+            @media (max-width: 991.98px) {
+                font-size: 20px;
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+            }
+
+            &.active {
+                background-color: var(--primary);
+                color: #fff;
+            }
+        }
+
+        &.show>.nav-link {
+            background-color: var();
+            color: #fff;
+        }
+    }
+
+    .profile-user {
+        height: 36px;
+        width: 36px;
+        // background-color: var(--border-color);
+        padding: 3px;
+    }
+}
+
+
+
+
+
+
+.theme-mode-icon {
+    &:before {
+        content: '\2600'; // Default Unicode character for the theme mode icon
+    }
+
+    &.dark:before {
+        content: '\1F319'; // Unicode character for moon or your preferred dark mode icon
+    }
+}
+
+
+//
+// _dropdown.scss
+//
+
+
+.dropdown {
+    cursor: pointer;
+}
+
+.profile-user-dropdown {
+    .dropdown-item {
+        &.active {
+            color: #fff;
+            text-decoration: none;
+            background-color: var(--primary);
+        }
+    }
+}
+
+.profile-user-dropdown {
+    &.dropup {
+        .dropdown-menu {
+            bottom: 51px;
+            top: auto !important;
+
+            &.show {
+                top: auto !important;
+            }
+        }
+    }
+}
+
+.profile-user-dropdown {
+    .dropdown-menu {
+        right: auto !important;
+        left: auto !important;
+
+        @media (max-width: 991.98px) {
+            left: auto !important;
+        }
+    }
+
+}
+
+.nav-item {
+    cursor: pointer;
+}
